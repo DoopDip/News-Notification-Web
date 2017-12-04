@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Add - News Notification</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+          integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+</head>
+<body>
+
+
+<div class="container">
+
+    <div class="row p-4">
+        <div class="col-sm-12 col-md-10">
+            <h2 class="text-center">
+            <span class="text-success">
+                Add
+            </span>
+                - News Notification
+            </h2>
+        </div>
+        <div class="col-sm-12 col-md-2">
+            <a href="index.php" class="btn btn-warning text-white btn-block" role="button" aria-pressed="true">จัดการข่าว</a>
+        </div>
+    </div>
+
+
+    <form class="bg-light p-4" method="post" action="push.php" enctype="multipart/form-data">
+
+        <div class="form-group row">
+            <label class="col-sm-3 col-md-2 col-form-label">หัวข้อข่าว</label>
+            <div class="col-sm-9 col-md-10">
+                <input name="title" type="text" class="form-control" placeholder="หัวข้อข่าว">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-3 col-md-2 col-form-label">รูปภาพ</label>
+            <div class="col-sm-9 col-md-10">
+                <input name="image" type="file" class="form-control-file">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-3 col-md-2 col-form-label">เนื้อหาข่าว</label>
+            <div class="col-sm-9 col-md-10">
+                <textarea name="content" class="form-control" rows="3" placeholder="เนื้อหาข่าว"></textarea>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-3 col-md-2 col-form-label">ประเภท</label>
+            <div class="col-sm-9 col-md-10">
+                <select name="type" class="form-control">
+                    <option value="1">ข่าวเศรษกิจ</option>
+                    <option value="2">ข่าวการเมือง</option>
+                    <option value="3">ข่าวเทคโนโลยี</option>
+                    <option value="4">ข่าวบันเทิง</option>
+                    <option value="5">ข่าวการศึกษา</option>
+                    <option value="6">ข่าวอาชญากรรม</option>
+                    <option value="7">ข่าวกีฬา</option>
+                    <option value="8">ข่าวสังคม</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-3 col-md-2 col-form-label"></label>
+            <div class="col-sm-9 col-md-10">
+                <label class="custom-control custom-checkbox">
+                    <input name="notification" type="checkbox" class="custom-control-input" checked="on">
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">ส่ง Notification ไปยัง App</span>
+                </label>
+
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-3 col-md-2 col-form-label"></div>
+            <div class="col-sm-9 col-md-10">
+                <button type="submit" class="btn btn-success">ยืนยัน</button>
+            </div>
+        </div>
+    </form>
+
+
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+        integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+        integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+</body>
+</html>
