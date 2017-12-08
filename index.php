@@ -100,7 +100,7 @@
             while($row = $result->fetch_assoc()) {
                 echo '<tr>
                         <th scope="row" class="text-center">'.$row['id'].'</th>
-                        <td><img style="height: 50px;" src="'.$row['image'].'" class="rounded mx-auto d-block"></td>
+                        <td><img style="height: 50px;" src="http://localhost:8888/newsnotification/image/'.$row['image'].'" class="rounded mx-auto d-block"></td>
                         <td>'.$row['title'].'</td>
                         <td>'.typeName($row['type']).'</td>
                         <td><a href="index.php?notification='.$row['id'].'" class="btn btn-warning btn-block text-white" role="button" aria-pressed="true">Notification</a></td>

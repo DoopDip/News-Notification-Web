@@ -11,7 +11,7 @@ $status_image = move_uploaded_file($_FILES["image"]["tmp_name"],"image/".$nameIm
 require_once ("db_config.php");
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) die("Connection failed: " . $conn->connect_error);
-$sql = "INSERT INTO ".$tbname." (id ,title, image, content, type) VALUES ('','".$_POST['title']."', 'http://".$_SERVER['HTTP_HOST']."/newsnotification/image/".$nameImage."', '".$_POST['content']."', '".$_POST['type']."')";
+$sql = "INSERT INTO ".$tbname." (id ,title, image, content, type) VALUES ('','".$_POST['title']."', '".$nameImage."', '".$_POST['content']."', '".$_POST['type']."')";
 $status_insert = $conn->query($sql);
 
 
